@@ -1,0 +1,121 @@
+/* web/static/style.css */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #2ecc71, #a8e6cf);
+  color: #111;
+}
+
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+h1 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 15px;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #43a047, #66bb6a);
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+.file-label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(46,125,50,0.4);
+  background: linear-gradient(135deg, #388e3c, #43a047);
+}
+
+.file-label:active {
+  transform: scale(0.97);
+}
+
+.file-name {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  color: #2e7d32;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+button:hover {
+  background: #f0fff4;
+  box-shadow: 0 4px 12px rgba(46,125,50,0.3);
+}
+
+#preview img {
+  max-width: 320px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#result {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.result-item {
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  background: #f8fff9;
+  border-left: 6px solid #2ecc71;
+  font-size: 15px;
+}
+
+.spinner {
+  border: 4px solid #eafbea;
+  border-top: 4px solid #2ecc71;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #444;
+}

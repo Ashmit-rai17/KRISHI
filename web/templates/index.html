@@ -1,0 +1,37 @@
+<!-- web/templates/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>🌿 Crop Disease Detector</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌿 Crop Disease Detector</h1>
+    <p>Upload an image of a crop leaf (wheat, rice, maize etc.) to detect possible diseases.</p>
+    
+    <form id="uploadForm">
+      <input type="file" id="imageInput" accept="image/*" required hidden />
+      <label for="imageInput" class="file-label">🌱 Choose Image</label>
+      <span id="fileName" class="file-name">No file chosen</span>
+      <br />
+      <button type="submit">Upload & Predict</button>
+    </form>
+    
+    <div id="preview"></div>
+    <div id="result"></div>
+
+    <footer>Made with ❤️ for Indian Agriculture</footer>
+  </div>
+  <script src="/static/main.js"></script>
+  <script>
+    // Show file name after selection
+    const input = document.getElementById("imageInput");
+    const fileNameSpan = document.getElementById("fileName");
+    input.addEventListener("change", () => {
+      fileNameSpan.textContent = input.files[0] ? input.files[0].name : "No file chosen";
+    });
+  </script>
+</body>
+</html>
